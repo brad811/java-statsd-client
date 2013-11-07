@@ -204,7 +204,7 @@ public final class NonBlockingStatsDClient implements StatsDClient {
     
     @Override
     public void recordGaugeValue(String aspect, double value) {
-        send(String.format("%s.%s:%d|g", prefix, aspect, value));
+        send(String.format("%s.%s:%f|g", prefix, aspect, value));
     }
 
     /**
