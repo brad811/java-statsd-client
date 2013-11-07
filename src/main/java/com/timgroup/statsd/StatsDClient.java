@@ -76,11 +76,13 @@ public interface StatsDClient {
      *     the new reading of the gauge
      */
     void recordGaugeValue(String aspect, int value);
+    void recordGaugeValue(String aspect, double value);
 
     /**
      * Convenience method equivalent to {@link #recordGaugeValue(String, int)}. 
      */
     void gauge(String aspect, int value);
+    void gauge(String aspect, double value);
 
     /**
      * Records an execution time in milliseconds for the specified named operation.
